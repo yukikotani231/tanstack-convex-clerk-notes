@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "oxlint src convex --ignore-pattern 'convex/_generated/**' --ignore-pattern '**/*.gen.ts'",
-    "fmt": "oxfmt --write src convex --ignore 'convex/_generated/**' --ignore '**/*.gen.ts'",
-    "fmt:check": "oxfmt --check src convex --ignore 'convex/_generated/**' --ignore '**/*.gen.ts'",
+    "fmt": "oxfmt --write src convex '!convex/_generated/**' '!**/*.gen.ts'",
+    "fmt:check": "oxfmt --check src convex '!convex/_generated/**' '!**/*.gen.ts'",
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {

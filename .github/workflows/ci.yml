@@ -14,12 +14,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Cache node_modules
+      - run: npm ci
+      - name: Save node_modules cache
         uses: actions/cache/save@v4
         with:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-      - run: npm ci
 
   lint:
     needs: setup

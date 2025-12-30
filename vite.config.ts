@@ -7,6 +7,11 @@ import tailwindcss from '@tailwindcss/vite'
 import { nitro } from 'nitro/vite'
 
 const config = defineConfig({
+  resolve: {
+    alias: {
+      'use-sync-external-store/shim/index.js': 'react',
+    },
+  },
   plugins: [
     devtools(),
     nitro(),

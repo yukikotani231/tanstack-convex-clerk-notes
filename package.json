@@ -8,9 +8,9 @@
     "start": "node .output/server/index.mjs",
     "preview": "vite preview",
     "test": "vitest run",
-    "lint": "oxlint src convex",
-    "fmt": "oxfmt --write src convex",
-    "fmt:check": "oxfmt --check src convex",
+    "lint": "oxlint src convex --ignore-pattern 'convex/_generated/**' --ignore-pattern '**/*.gen.ts'",
+    "fmt": "oxfmt --write src convex --ignore 'convex/_generated/**' --ignore '**/*.gen.ts'",
+    "fmt:check": "oxfmt --check src convex --ignore 'convex/_generated/**' --ignore '**/*.gen.ts'",
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
